@@ -1,0 +1,131 @@
+:root {
+  --background: #0a0a1a;
+  --foreground: #f0f0ff;
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+  --muted-foreground: #a0a0c8;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(79, 70, 229, 0.18) 0%, transparent 70%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 42rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--foreground);
+  text-shadow: 0 0 40px color-mix(in oklab, var(--primary) 50%, transparent);
+}
+
+@media (min-width: 640px) {
+  h1 { font-size: 3.75rem; }
+}
+
+@media (min-width: 768px) {
+  h1 { font-size: 4.5rem; }
+}
+
+.subtitle {
+  margin-top: 16px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+@media (min-width: 640px) {
+  .subtitle { font-size: 1.5rem; }
+}
+
+.description {
+  margin-top: 24px;
+  max-width: 512px;
+  font-size: 1rem;
+  line-height: 1.625;
+  color: var(--muted-foreground);
+}
+
+@media (min-width: 640px) {
+  .description { font-size: 1.125rem; }
+}
+
+.cta-btn {
+  margin-top: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 14px 32px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 24px color-mix(in oklab, var(--primary) 40%, transparent);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: rgba(79, 70, 229, 0.9);
+  transform: scale(1.03);
+}
+
+.cta-btn:active {
+  transform: scale(0.98);
+}
